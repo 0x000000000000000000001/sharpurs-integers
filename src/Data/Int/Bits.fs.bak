@@ -1,0 +1,7 @@
+let and = fun (n1: obj) -> fun (n2: obj) -> box ((n1 :?> int) &&& (n2 :?> int))
+let or = fun (n1: obj) -> fun (n2: obj) -> box ((n1 :?> int) ||| (n2 :?> int))
+let xor = fun (n1: obj) -> fun (n2: obj) -> box ((n1 :?> int) ^^^ (n2 :?> int))
+let shl = fun (n1: obj) -> fun (n2: obj) -> box ((n1 :?> int) <<< (n2 :?> int))
+let shr = fun (n1: obj) -> fun (n2: obj) -> box ((n1 :?> int) >>> (n2 :?> int))
+let zshr = fun (n1: obj) -> fun (n2: obj) -> box (int (uint32 (n1 :?> int) >>> (n2 :?> int)))
+let complement = fun (n: obj) -> box (~~~(n :?> int))
